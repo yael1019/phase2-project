@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Homepage from './Homepage';
 import Navbar from "./Navbar";
 
 function App() {
+  const [driverMode, setDriverMode] = useState(false);
+  const [toggleHamburger, setToggleHamburger] = useState(false);
+  function handleModeClick() {
+    setDriverMode(!driverMode)
+  }
+  function handleHamburger() {
+    setToggleHamburger(!toggleHamburger)
+  }
   return (
-    <div>
-      <p>
-        -
-        <br />
-        -
-        <br />
-        -
-      </p>
+    <div className={driverMode ? "App driver" : 'App car'}>
+      
+      <div onClick={handleHamburger}>
+      <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <Navbar />
-      <Homepage />
+      <Homepage handleModeClick={handleModeClick} />
     </div>
   );
 }
