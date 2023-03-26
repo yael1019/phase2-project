@@ -2,7 +2,14 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div></div>
+    <div>
+      <div>
+      <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   )
 }
 

@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import Homepage from './Homepage';
 import Navbar from "./Navbar";
+import NoMatch from './NoMatch';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [driverMode, setDriverMode] = useState(false);
-  const [toggleHamburger, setToggleHamburger] = useState(false);
+
   function handleModeClick() {
     setDriverMode(!driverMode)
   }
-  function handleHamburger() {
-    setToggleHamburger(!toggleHamburger)
-  }
+  
   return (
     <div className={driverMode ? "App driver" : 'App car'}>
       
-      <div onClick={handleHamburger}>
-      <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <Navbar />
-      <Homepage handleModeClick={handleModeClick} />
+
+      <Routes>
+        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} /> } />
+        <Route path="*" element={ <NoMatch /> } />
+      </Routes>
     </div>
   );
 }
