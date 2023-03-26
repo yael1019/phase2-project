@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 function Homepage({ handleModeClick }) {
+    const navigate = useNavigate()
   return (
     <div>
         <motion.button
@@ -9,6 +11,7 @@ function Homepage({ handleModeClick }) {
             scale: 1.1,
             boxShadow: '0px 0px 8px rgb(255, 255, 255)'
         }}
+        onClick={ () => navigate('/login') }
         >
             Log In
         </motion.button>

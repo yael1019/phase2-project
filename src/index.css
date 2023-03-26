@@ -48,7 +48,7 @@ h1 {
 
 button {
   font-family: 'Montserrat', sans-serif;
-  /* font-weight: bold; */
+  font-weight: bold;
   /* background-color: black; */
   background-color: rgb(181, 11, 11);
   /* background-color: rgb(230, 227, 32); */
@@ -95,7 +95,7 @@ nav{
 }
 
 button.hamburger{
-  background-color: #ffffff;
+  background-color: rgb(181, 11, 11);
   z-index: 101;
   position: fixed;
   outline: 0;
