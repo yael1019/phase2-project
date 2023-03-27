@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Homepage from './Homepage';
 import Navbar from "./Navbar";
 import NoMatch from './NoMatch';
-import Specs from "./Specs";
+import Specs from "./Specs/Specs";
 import LogIn from "./LogIn/LogIn";
 import CompareTrack from "./CompareTrack";
 
@@ -17,11 +17,18 @@ function App() {
   })
   const [driverMode, setDriverMode] = useState(false);
   const [user, setUser] = useState({})
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
       fetch('http://localhost:3001/users')
           .then(resp => resp.json())
           .then(data => setUser(data))
+  }, [])
+
+  useEffect(() => {
+    fetch('http://localhost:3001/Cars')
+      .then(resp => resp.json())
+      .then(data => setCars(data))
   }, [])
 
   function handleModeClick() {
@@ -56,7 +63,7 @@ function App() {
         <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } setUser={ setUser } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />
-        <Route path="specs" element= {<Specs/>} />
+        <Route path="specs" element= {<Specs cars={ cars } />} />
         <Route path="compare-track" element= {<CompareTrack/>} />
 
       </Routes>

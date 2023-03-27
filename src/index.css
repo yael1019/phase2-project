@@ -130,3 +130,42 @@ nav .innerNav NavLink:hover{
 form{
   
 }
+
+.specs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  gap: 5em;
+}
+
+.car-card{
+  border: 2px solid white;
+  border-radius: 13px;
+  /* box-shadow: 20px 40px 33px rgba(0, 0, 0, 50%); */
+  box-shadow: 20px 40px 33px rgba(254, 254, 254, 0.5);
+  background-color: black;
+  color: white;
+  width: 35rem;
+  height: 39rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.4em;
+  overflow: auto;
+}
+
+.car-card img{
+  width: 30rem;
+  height: auto;
+  box-shadow: 10px 15px 15px 6px rgba(245, 245, 245, 0.3);
+  border-radius: 15px;
+}
+
+.car-card h3{
+  text-align: left;
+  display: inline-block;
+}
