@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import Homepage from './Homepage';
 import Navbar from "./Navbar";
 import NoMatch from './NoMatch';
+import Specs from "./Specs";
 import LogIn from "./LogIn/LogIn";
+import CompareTrack from "./CompareTrack";
+
+
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
 function App() {
@@ -52,6 +56,9 @@ function App() {
         <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } setUser={ setUser } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />
+        <Route path="specs" element= {<Specs/>} />
+        <Route path="compare-track" element= {<CompareTrack/>} />
+
       </Routes>
     </div>
   );
