@@ -25,11 +25,13 @@ function App() {
           .then(data => setUser(data))
   }, [])
 
-  useEffect(() => {
-    fetch('http://localhost:3001/Cars')
-      .then(resp => resp.json())
-      .then(data => setCars(data))
-  }, [])
+
+  useEffect(()=> {
+    fetch("http://localhost:3001/Cars")
+    .then(response => response.json())
+    .then(data => setCars(data))
+  },[])
+
 
   function handleModeClick() {
     setDriverMode(!driverMode)
@@ -62,9 +64,11 @@ function App() {
       <Routes>
         <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } setUser={ setUser } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
-        <Route path="*" element={ <NoMatch /> } />
+        <Route path="*" element={ <NoMatch /> } />        
+        <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
         <Route path="specs" element= {<Specs cars={ cars } />} />
-        <Route path="compare-track" element= {<CompareTrack/>} />
+       
+
 
       </Routes>
     </div>
