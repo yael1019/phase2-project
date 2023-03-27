@@ -49,7 +49,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } /> } />
+        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } setUser={ setUser } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />
       </Routes>
