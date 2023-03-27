@@ -127,6 +127,10 @@
     }
   ],
   "users": [
-    
+    {
+      "username": "George",
+      "password": "eibrfjerb",
+      "id": 1
+    }
   ]
 }
