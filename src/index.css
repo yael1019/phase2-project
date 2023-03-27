@@ -130,3 +130,63 @@ nav .innerNav NavLink:hover{
 form{
   
 }
+
+.specs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  gap: 5em;
+}
+
+.car-card{
+  border: 2px solid white;
+  border-radius: 13px;
+  /* box-shadow: 20px 40px 33px rgba(0, 0, 0, 50%); */
+  box-shadow: 20px 40px 33px rgba(254, 254, 254, 0.5);
+  background-color: black;
+  color: white;
+  width: 35rem;
+  height: 39rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.4em;
+  overflow: auto;
+}
+
+.car-card img{
+  width: 25rem;
+  height: auto;
+  box-shadow: 10px 15px 15px 6px rgba(245, 245, 245, 0.3);
+  border-radius: 15px;
+}
+
+.car-card h2{
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.car-card div {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-items: space-around; */
+  gap: 0.5em;
+  /* justify-content: space-evenly;
+  margin-top: 2em; */
+  flex-direction: column;
+    align-items: flex-start;
+}
+
+.car-card div h3{
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  /* display: inline;
+  line-height: 5em;
+  word-spacing: 0.2em; */
+}
