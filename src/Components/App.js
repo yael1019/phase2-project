@@ -12,12 +12,12 @@ function App() {
     password: ''
   })
   const [driverMode, setDriverMode] = useState(false);
-  const [users, setUsers] = useState([])
+  const [user, setUser] = useState({})
 
   useEffect(() => {
       fetch('http://localhost:3001/users')
           .then(resp => resp.json())
-          .then(data => setUsers(data))
+          .then(data => setUser(data))
   }, [])
 
   function handleModeClick() {
@@ -34,6 +34,8 @@ function App() {
       },
       body: JSON.stringify(form)
     })
+      .then(resp => resp.json())
+      .then(obj => setUser(obj))
     setForm({
       username: '',
       password: ''
@@ -47,7 +49,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} /> } />
+        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />
       </Routes>
