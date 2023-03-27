@@ -51,46 +51,48 @@ const textAnimate2 = {
 
 function CarCard({ car }) {
   return (
-    <motion.div 
-    class='car-card'
-    initial={'offScreen'}
-    whileInView={'onScreen'}
-    viewport={{once: true, amount: 0.5}}
-    transition={{staggerChildren: 0.5}}
+    <motion.div
+      class='car-card'
+      initial={'offScreen'}
+      whileInView={'onScreen'}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.3 }}
     >
       <motion.h2
-      // initial={'offScreen'}
-      // animate={'onScreen'}
-      variants={textAnimate}
+        // initial={'offScreen'}
+        // animate={'onScreen'}
+        variants={textAnimate}
       >
         {car.make}
       </motion.h2>
 
-      <motion.img 
-      src={ car.image[0] } 
-      alt="Car" 
-      variants={imageAnimate}
+      <motion.img
+        src={car.image[0]}
+        alt="Car"
+        variants={imageAnimate}
       />
-      <motion.h3
-      variants={textAnimate2}
-      >
-        Model: { car.model }
-      </motion.h3>
-      <motion.h3
-      variants={textAnimate2}
-      >
-        Year: { car.year }
-      </motion.h3>
-      <motion.h3
-      variants={textAnimate2}
-      >
-        ${ car.cost }
-      </motion.h3>
-      <motion.h3
-      variants={textAnimate2}
-      >
-        HP: { car.hp }
-      </motion.h3>
+      <div>
+        <motion.h3
+          variants={textAnimate2}
+        >
+          Model: {car.model}
+        </motion.h3>
+        <motion.h3
+          variants={textAnimate2}
+        >
+          Year: {car.year}
+        </motion.h3>
+        <motion.h3
+          variants={textAnimate2}
+        >
+          ${car.cost}
+        </motion.h3>
+        <motion.h3
+          variants={textAnimate2}
+        >
+          HP: {car.hp}
+        </motion.h3>
+      </div >
     </motion.div>
   )
 }
