@@ -17,12 +17,21 @@ function App() {
   })
   const [driverMode, setDriverMode] = useState(false);
   const [user, setUser] = useState({})
+  const [cars, setCars]= useState([])
 
   useEffect(() => {
       fetch('http://localhost:3001/users')
           .then(resp => resp.json())
           .then(data => setUser(data))
   }, [])
+
+  useEffect(()=> {
+    fetch("http://localhost:3001/Cars")
+    .then(response => response.json())
+    .then(data => setCars(data))
+
+
+  },[])
 
   function handleModeClick() {
     setDriverMode(!driverMode)
@@ -57,7 +66,7 @@ function App() {
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />
         <Route path="specs" element= {<Specs/>} />
-        <Route path="compare-track" element= {<CompareTrack/>} />
+        <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
 
       </Routes>
     </div>
