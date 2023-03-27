@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <div>
-    {/* HAMBURGER */}
+      {/* HAMBURGER */}
       <motion.button
         className='hamburger'
         onClick={() => setClickBurger(!clickBurger)}
@@ -29,10 +29,10 @@ function Navbar() {
       >
         {
           clickBurger
-          ?
-          <CloseIcon />
-          :
-          <MenuIcon />
+            ?
+            <CloseIcon />
+            :
+            <MenuIcon />
         }
       </motion.button>
 
@@ -44,11 +44,20 @@ function Navbar() {
         transition={{ duration: 0.5 }}
       >
         <motion.div className='innerNav'>
-          <NavLink to='/' >Home</NavLink>
-          <br></br>
-          <NavLink to='specs' >Specs</NavLink>
-          <br></br>
-          <NavLink to='compare-track'>Compare Track</NavLink>
+          <ul>
+            <li>
+              <NavLink to='/' >Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='specs' >Specs</NavLink>
+            </li>
+            <li>
+              <NavLink to='compare-track'>Compare Track</NavLink>
+            </li>
+            <li>
+              <NavLink to='login'>Log In</NavLink>
+            </li>
+          </ul>
 
         </motion.div>
       </motion.nav>
