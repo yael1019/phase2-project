@@ -45,6 +45,10 @@ function Navbar() {
       >
         <motion.div className='innerNav'>
           <NavLink to='/' >Home</NavLink>
+          <br></br>
+          <NavLink to='specs' >Specs</NavLink>
+          <br></br>
+          <NavLink to='compare-track'>Compare Track</NavLink>
 
         </motion.div>
       </motion.nav>
