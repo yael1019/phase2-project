@@ -275,20 +275,38 @@ nav .innerNav li:active{
   word-spacing: 0.2em; */
 }
 
-#carForm{
-  left: 50em;
+.carForm{
+  left: 20em;
+  top: 2em;
   position: relative;
   
   
 }
-#carForm input{
-  margin: 20px;
+.carForm input{
+  margin: 2em;
+  width: 30em;
+  height: 3em;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .textArea{
   position: relative;
-  left: 8em;
+  left: 10em;
+  height: 10em;
+  width: 50em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 2px solid black;
 }
+
+/* .addCarInput{
+  position: relative;
+  left: 8em;
+} */
 
 .slider {
   position: relative;
@@ -347,5 +365,11 @@ nav .innerNav li:active{
   background-color: rgba(0, 0, 0, 0.8);
   width: 60em;
   left: 16em;
-  word-spacing: 4px;
+  word-spacing: 4px; 
+} 
+
+#submitCarBtn{
+  position:relative;
+  left: 25em;
+  width: 15em;
 }

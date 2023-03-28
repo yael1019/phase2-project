@@ -51,6 +51,21 @@ function App() {
     })
     navigate('/')
   }
+  function addCar(newObj) {
+    fetch('http://localhost:3001/Cars',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify(newObj)
+
+    })
+    .then(response => response.json())
+    .then(newCar => setCars([...cars, newCar]) )
+
+
+  }
   
   return (
     <div>
@@ -62,9 +77,10 @@ function App() {
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />        
         <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
-        <Route path="specs" element= {<Specs cars={ cars } />} />
-        <Route path="add-car" element={<CarForm/>}/>
+        <Route path="specs" element= {<Specs cars={ cars } />} /> 
         <Route path="specs/:id" element={ <CarPage /> } />
+        <Route path="add-car" element={<CarForm addCar={addCar}/>}/>
+
       </Routes>
     </div>
   );
