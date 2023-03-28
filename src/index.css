@@ -232,3 +232,18 @@ form{
   line-height: 5em;
   word-spacing: 0.2em; */
 }
+
+#carForm{
+  left: 50em;
+  position: relative;
+  
+  
+}
+#carForm input{
+  margin: 20px;
+}
+
+.textArea{
+  position: relative;
+  left: 8em;
+}
