@@ -356,6 +356,7 @@ nav .innerNav li:active{
 }
 
 .car-pg-h3{
+  margin: auto;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   border: 3px solid white;
@@ -364,7 +365,7 @@ nav .innerNav li:active{
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
   width: 60em;
-  left: 16em;
+  /* left: 3em; */
   word-spacing: 4px; 
 } 
 
