@@ -154,7 +154,7 @@ nav .innerNav li:active{
   position: relative;
 }
 
-form{
+.login-form{
   width: 20em;
   position: relative;
   left: 50em;
@@ -174,7 +174,7 @@ form label{
   font-size: 45px;
 }
 
-form input{
+.login-form input{
   width: 16em;
   height: 2em;
   border-radius: 5px;
@@ -183,7 +183,7 @@ form input{
   text-align: center;
 }
 
-form input[type=submit]{
+.login-form input[type=submit]{
   width: 17em;
   height: 2.2em;
   
@@ -275,17 +275,41 @@ form input[type=submit]{
   word-spacing: 0.2em; */
 }
 
-#carForm{
-  left: 50em;
+.carForm{
+  left: 20em;
+  top: 2em;
   position: relative;
   
   
 }
-#carForm input{
-  margin: 20px;
+.carForm input{
+  margin: 2em;
+  width: 30em;
+  height: 3em;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .textArea{
   position: relative;
+  left: 10em;
+  height: 10em;
+  width: 50em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+/* .addCarInput{
+  position: relative;
   left: 8em;
+ 
+} */
+#submitCarBtn{
+  position:relative;
+  left: 25em;
+  width: 15em;
 }

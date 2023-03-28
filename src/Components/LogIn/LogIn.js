@@ -9,7 +9,7 @@ function LogIn({ form, setForm, handleSubmit }) {
   return (
     <div id='login-div'>
       <img id='user-icon' src='https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png' alt='user icon' />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='login-form'>
         <label htmlFor="username">Username:</label>
         <br />
         <motion.input
