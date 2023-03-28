@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 const imageAnimate = {
   offScreen: {
@@ -50,17 +51,17 @@ const textAnimate2 = {
 }
 
 function CarCard({ car }) {
+  const navigate = useNavigate();
   return (
     <motion.div
-      class='car-card'
+      className='car-card'
       initial={'offScreen'}
       whileInView={'onScreen'}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ staggerChildren: 0.3 }}
+      transition={{ staggerChildren: 0.3 }} 
+      onClick={ () => navigate(`/specs/${car.id}`) }
     >
       <motion.h2
-        // initial={'offScreen'}
-        // animate={'onScreen'}
         variants={textAnimate}
       >
         {car.make}

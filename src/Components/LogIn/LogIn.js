@@ -1,10 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
 function LogIn({ form, setForm, handleSubmit }) {
-  const navigate = useNavigate()
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value })
   return (
     <div id='login-div'>
