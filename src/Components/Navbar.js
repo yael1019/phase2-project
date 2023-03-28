@@ -55,6 +55,9 @@ function Navbar() {
               <NavLink to='compare-track'>Compare Track</NavLink>
             </li>
             <li>
+              <NavLink to='add-car'>Add Vehicle</NavLink>
+            </li>
+            <li>
               <NavLink to='login'>Log In</NavLink>
             </li>
           </ul>

@@ -5,6 +5,7 @@ import NoMatch from './NoMatch';
 import Specs from "./Specs/Specs";
 import LogIn from "./LogIn/LogIn";
 import CompareTrack from "./CompareTrack";
+import CarForm from "./CarForm/CarForm";
 
 
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -61,6 +62,7 @@ function App() {
         <Route path="*" element={ <NoMatch /> } />        
         <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
         <Route path="specs" element= {<Specs cars={ cars } />} />
+        <Route path="add-car" element={<CarForm/>}/>
       </Routes>
     </div>
   );
