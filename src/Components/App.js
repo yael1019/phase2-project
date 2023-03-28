@@ -6,6 +6,7 @@ import Specs from "./Specs/Specs";
 import LogIn from "./LogIn/LogIn";
 import CompareTrack from "./CompareTrack";
 import CarForm from "./CarForm/CarForm";
+import CarPage from "./Specs/CarPage";
 
 
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -63,6 +64,7 @@ function App() {
         <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
         <Route path="specs" element= {<Specs cars={ cars } />} />
         <Route path="add-car" element={<CarForm/>}/>
+        <Route path="specs/:id" element={ <CarPage /> } />
       </Routes>
     </div>
   );

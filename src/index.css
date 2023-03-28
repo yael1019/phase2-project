@@ -154,7 +154,7 @@ nav .innerNav li:active{
   position: relative;
 }
 
-form{
+.login-form{
   width: 20em;
   position: relative;
   left: 50em;
@@ -166,7 +166,7 @@ form{
   height: 100vh;
 }
 
-form label{
+.login-form label{
   line-height: 2em;
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -174,7 +174,7 @@ form label{
   font-size: 45px;
 }
 
-form input{
+.login-form input{
   width: 16em;
   height: 2em;
   border-radius: 5px;
@@ -183,7 +183,7 @@ form input{
   text-align: center;
 }
 
-form input[type=submit]{
+.login-form input[type=submit]{
   width: 17em;
   height: 2.2em;
   
@@ -288,4 +288,64 @@ form input[type=submit]{
 .textArea{
   position: relative;
   left: 8em;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.right-arrow{
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow{
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide{
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.car-pg-h3{
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 60em;
+  left: 16em;
+  word-spacing: 4px;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import CarCard from './CarCard';
-import { motion, Variants } from 'framer-motion'
 
 function Specs({ cars }) {
   const carsDisplay = cars.map(car => <CarCard key={car.id} car={car} />)
