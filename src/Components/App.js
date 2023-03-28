@@ -15,7 +15,6 @@ function App() {
     username: '',
     password: ''
   })
-  const [driverMode, setDriverMode] = useState(false);
   const [user, setUser] = useState({})
   const [cars, setCars] = useState([]);
 
@@ -31,11 +30,6 @@ function App() {
     .then(response => response.json())
     .then(data => setCars(data))
   },[])
-
-
-  function handleModeClick() {
-    setDriverMode(!driverMode)
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -57,19 +51,16 @@ function App() {
   }
   
   return (
-    <div className={driverMode ? "App driver" : 'App car'}>
+    <div>
       
       <Navbar />
 
       <Routes>
-        <Route path="/" element={ <Homepage handleModeClick={handleModeClick} user={ user } setUser={ setUser } /> } />
+        <Route path="/" element={ <Homepage user={ user } setUser={ setUser } /> } />
         <Route path="login" element={ <LogIn form={ form } setForm={ setForm } handleSubmit={ handleSubmit } /> } />
         <Route path="*" element={ <NoMatch /> } />        
         <Route path="compare-track" element= {<CompareTrack cars={cars}/>} />
         <Route path="specs" element= {<Specs cars={ cars } />} />
-       
-
-
       </Routes>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-function Homepage({ handleModeClick, user, setUser }) {
+function Homepage({ user, setUser }) {
     const navigate = useNavigate()
 
     function handleLogoutClick() {
@@ -37,7 +37,6 @@ function Homepage({ handleModeClick, user, setUser }) {
             }
             <motion.button
                 id='change-img-btn'
-                onClick={handleModeClick}
                 whileHover={{
                     scale: 1.1,
                     boxShadow: '0px 0px 8px rgb(255, 255, 255)'
