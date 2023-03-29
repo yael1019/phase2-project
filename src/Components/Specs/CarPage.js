@@ -37,10 +37,10 @@ function CarPage() {
     )
   })
 
-  function handlePlay() {
-    let audio = new Audio()
-    audio.play();
-  }
+  // function handlePlay() {
+  //   let audio = new Audio()
+  //   audio.play();
+  // }
 
   return (
     <div>
@@ -50,7 +50,7 @@ function CarPage() {
         <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
         {images}
       </section>
-      <button id='play' onClick={ handlePlay }>Play</button>
+      {/* <button id='play' onClick={ handlePlay }>Play</button> */}
       <div className='car-pg-h3'>
         <h3>Model: {carObj.model}</h3>
         <h3>Year: {carObj.year}</h3>
