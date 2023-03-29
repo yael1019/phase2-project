@@ -35,15 +35,6 @@ function Homepage({ user, setUser }) {
                         Log In
                     </motion.button>
             }
-            <motion.button
-                id='change-img-btn'
-                whileHover={{
-                    scale: 1.1,
-                    boxShadow: '0px 0px 8px rgb(255, 255, 255)'
-                }}
-            >
-                Driver's Seat Mode
-            </motion.button>
             <motion.h1
                 initial={{ x: -2000 }}
                 animate={{ x: 0 }}
